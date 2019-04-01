@@ -1,4 +1,3 @@
-import model.City;
 import org.hibernate.Session;
 import utils.HibernateUtil;
 
@@ -6,10 +5,10 @@ public class HibernateApplication {
 
     public static void main(String... args) {
         Session session = estabilishConnection();
-
         session.beginTransaction();
-        City city = (City) session.load(City.class, 1L);
-        System.out.println(city.getCountryCode());
+
+        //tutaj wywyołujemy kolejne zadania
+        TaskRunner.selectEmployee(session);
 
         session.getTransaction().commit();
         session.close();

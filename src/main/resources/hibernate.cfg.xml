@@ -13,5 +13,8 @@
         <property name="show_sql">false</property>
 
         <mapping class="model.City"/>
+        <mapping class="model.Country"/>
+        <mapping class="model.HumanEmployee"/>
+        <mapping class="model.HumanEmployeeDetails"/>
     </session-factory>
 </hibernate-configuration>

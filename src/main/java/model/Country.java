@@ -8,20 +8,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "city")
+@Table(name = "country")
 @Getter
 @Setter
-public class City {
+public class Country {
 
     @Id
-    private Long id;
+    private String code;
 
     private String name;
 
-    private String district;
+    private String continent;
+
+    private String surfaceArea;
 
     private String population;
-
-    private String countryCode;
 
 }
