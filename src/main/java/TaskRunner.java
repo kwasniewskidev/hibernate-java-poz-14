@@ -176,7 +176,6 @@ public class TaskRunner {
      */
     public static void selectCityInfo(Session session) {
         String hql = "select new model.CityInfo( c.name, c.population)FROM City c where id = :id";
-        new CityInfo("name", "pop");
         Query query = session.createQuery(hql);
         query.setParameter("id", 1L);
         CityInfo cityInfo = (CityInfo) query.list().get(0);
